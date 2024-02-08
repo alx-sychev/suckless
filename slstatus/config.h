@@ -73,6 +73,7 @@ static const struct arg args[] = {
 
     { cpu_perc,     " CPU: %s%% |",     NULL },
 	{ ram_perc,     " RAM: %s%% |",     NULL },
+	{ temp,         " TEMP: %s℃ |",     "/sys/class/thermal/thermal_zone7/temp" },
 
 	{ wifi_essid,     " %s",      INTERFACE },
 	{ wifi_perc,      " %s%% |",  INTERFACE },
