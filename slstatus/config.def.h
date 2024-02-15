@@ -7,7 +7,10 @@ const unsigned int interval = 1000;
 static const char unknown_str[] = "n/a";
 
 /* maximum output string length */
-#define MAXLEN 2048
+#define MAXLEN 512
+
+#define BATTERY "BAT0"
+#define INTERFACE "wlan0"
 
 /*
  * function            description                     argument (example)
@@ -64,6 +67,18 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-	{ datetime, "%s",           "%F %T" },
+	/* function     format              argument */
+
+	{ keymap,       " | %s |",          NULL },
+
+    { cpu_perc,     " CPU: %s%% |",     NULL },
+	{ ram_perc,     " RAM: %s%% |",     NULL },
+	{ temp,         " TEMP: %s℃ |",     "/sys/class/thermal/thermal_zone7/temp" },
+
+	{ wifi_essid,     " %s",        INTERFACE },
+	{ wifi_perc,      " %s%% |",    INTERFACE },
+	{ run_command,    " VPN: %s |", "vpn slstatus" },
+
+	{ battery_perc,   " BAT: %s%% |",     BATTERY },
+	{ datetime,       " %s ",             "%m-%d %H:%M" },
 };

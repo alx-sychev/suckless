@@ -75,10 +75,9 @@ static const struct arg args[] = {
 	{ ram_perc,     " RAM: %s%% |",     NULL },
 	{ temp,         " TEMP: %s℃ |",     "/sys/class/thermal/thermal_zone7/temp" },
 
-	{ wifi_essid,     " %s",      INTERFACE },
-	{ wifi_perc,      " %s%% |",  INTERFACE },
-	/* { netspeed_rx,    " %s",    INTERFACE }, */
-	/* { netspeed_tx,    " %s |",  INTERFACE }, */
+	{ wifi_essid,     " %s",        INTERFACE },
+	{ wifi_perc,      " %s%% |",    INTERFACE },
+	{ run_command,    " VPN: %s |", "vpn slstatus" },
 
 	{ battery_perc,   " BAT: %s%% |",     BATTERY },
 	{ datetime,       " %s ",             "%m-%d %H:%M" },
