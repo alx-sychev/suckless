@@ -78,6 +78,7 @@ static const struct arg args[] = {
 	{ wifi_essid,     " %s",        INTERFACE },
 	{ wifi_perc,      " %s%% |",    INTERFACE },
 	{ run_command,    " VPN: %s |", "vpn slstatus" },
+	{ run_command,    " BHP: %s |", "slstatus.bheadphones" },
 
 	{ battery_perc,   " BAT: %s%% |",     BATTERY },
 	{ datetime,       " %s ",             "%m-%d %H:%M" },
