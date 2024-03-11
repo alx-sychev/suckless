@@ -71,15 +71,15 @@ static const struct arg args[] = {
 
 	{ keymap,       " | %s |",          NULL },
 
-    { cpu_perc,     " CPU: %s%% |",     NULL },
-	{ ram_perc,     " RAM: %s%% |",     NULL },
-	{ temp,         " TEMP: %s℃ |",     "/sys/class/thermal/thermal_zone7/temp" },
+	/* { cpu_perc,     " CPU: %s%% |",     NULL }, */
+	/* { ram_perc,     " RAM: %s%% |",     NULL }, */
+	/* { temp,         " TEMP: %s℃ |",     "/sys/class/thermal/thermal_zone7/temp" }, */
 
 	{ wifi_essid,     " %s",        INTERFACE },
 	{ wifi_perc,      " %s%% |",    INTERFACE },
-	{ run_command,    " VPN: %s |", "vpn slstatus" },
+	{ run_command,    " VPN: %s |", "slstatus.vpn" },
 	{ run_command,    " BHP: %s |", "slstatus.bheadphones" },
 
 	{ battery_perc,   " BAT: %s%% |",     BATTERY },
-	{ datetime,       " %s ",             "%m-%d %H:%M" },
+	{ datetime,       " %s ",             "%d %B (%A) %H:%M" },
 };
